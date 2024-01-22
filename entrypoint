@@ -9,5 +9,5 @@ if ! [ -z "$INPUT_DOCSDIR" ]; then
   cd $INPUT_DOCSDIR
 fi
 
-sphinx-build -b confluence . _build/confluence -E -a \
-  -D confluence_server_user=$INPUT_USERNAME -D confluence_server_pass=$INPUT_APITOKEN
+sphinx-build -b confluence -D confluence_server_user=$INPUT_USERNAME -D confluence_server_pass=$INPUT_APITOKEN . _build/confluence -E -a 
+  
