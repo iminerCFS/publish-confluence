@@ -1,12 +1,12 @@
-FROM python:3.6
+FROM python:3.10
 
 USER root
 
-RUN pip install \
-  Sphinx==2.4.4 \
+RUN pip install -U \
+  Sphinx \
   sphinxcontrib-confluencebuilder \
-  recommonmark \
-  m2r2
+  sphinxcontrib-katex \
+  sphinx_numfig
 
 COPY entrypoint entrypoint
 
